@@ -1,3 +1,4 @@
+0
 [{"id": 1, "name": "name", "boolfield": true},
 {"id": 2, "name": "another name", "boolfield": true},
 {"id": 3, "name": "yet another", "boolfield": false}]
