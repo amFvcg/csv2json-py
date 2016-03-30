@@ -22,8 +22,6 @@ See 'test' directory.
 
 * *test_mapping* - examplary mapping;
 
-* *test_output* - output for 'normal' mode; first line contains exit code;
-next lines is a JSON with parsed input;
+* *test_output* - output for 'normal' mode; first line contains exit code; next lines is a JSON with parsed input;
 
-* *test_validation_output* - output for 'validation' mode; first line contains
-exit code; next lines (if present) list lines that failed;
+* *test_validation_output* - output for 'validation' mode; first line contains exit code; next lines (if present) list lines that failed;
