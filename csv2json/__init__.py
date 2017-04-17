@@ -13,5 +13,8 @@ args = parser.parse_args()
 
 if __name__ == "__main__":
     mapping = read_mapping(args.mapping)
-    print(validate_file(args.data, mapping))
+    validated = validate_file(args.data, mapping)
+    if args.validate:
+        return validated
+
     print(parse_file(args.data, mapping))
