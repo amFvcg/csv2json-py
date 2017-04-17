@@ -3,7 +3,7 @@ from unittest import TestCase
 
 class TestMain(TestCase):
     def test_mybool(self):
-        from main import mybool
+        from csv2json.main import mybool
         self.assertTrue(mybool("Y"))
         self.assertTrue(mybool("y"))
         self.assertTrue(mybool("1"))
@@ -12,7 +12,7 @@ class TestMain(TestCase):
         self.assertFalse(mybool("0"))
 
     def test_do_mapping(self):
-        from main import do_mapping, Mapping, mybool
+        from csv2json.main import do_mapping, Mapping, mybool
         lines = ['id=int', 'name=string', 'mybool=bool']
         parsed_lines = [do_mapping(line) for line in lines]
         self.assertListEqual([Mapping('id', int),
@@ -21,7 +21,7 @@ class TestMain(TestCase):
                              parsed_lines)
 
     def test_validate_items(self):
-        from main import validate_items, mybool, Mapping
+        from csv2json.main import validate_items, mybool, Mapping
         items = ['1', 'some string', 'N']
         mapping = [Mapping('id', int),
                    Mapping('name', str),
@@ -29,7 +29,7 @@ class TestMain(TestCase):
         self.assertTrue(validate_items(items, mapping))
 
     def test_validate_items_fail(self):
-        from main import validate_items, mybool, Mapping
+        from csv2json.main import validate_items, mybool, Mapping
         items = ['1a', 'some string', 'N']
         mapping = [Mapping('id', int),
                    Mapping('name', str),
@@ -37,7 +37,7 @@ class TestMain(TestCase):
         self.assertFalse(validate_items(items, mapping))
 
     def test_parse_items(self):
-        from main import parse_items, mybool, Mapping
+        from csv2json.main import parse_items, mybool, Mapping
         items = ['1', 'some string', 'N']
         mapping = [Mapping('id', int),
                    Mapping('name', str),

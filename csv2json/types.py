@@ -1,11 +1,9 @@
-from functools import wraps
-
-
 def nullable(func):
-    wraps(func)
+#    from functools import wraps
+#    wraps(func)
 
     def wrapper(val):
-        if len(val) is None or\
+        if len(val) is 0 or\
            val == 'null':
             return None
         return func(val)

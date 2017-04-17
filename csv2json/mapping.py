@@ -9,7 +9,7 @@ def do_mapping(line):
     name = line.split('=')[0]
     field_type = line.split('=')[1]
     return Mapping(name,
-                   int if  == 'int' else
+                   int if field_type[0] == 'int' else
                    str if line.split('=')[1] == 'string' else
                    float if line.split('=')[1] == 'float' else
                    mybool if line.split('=')[1] == 'bool' else None)
