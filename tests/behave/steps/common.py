@@ -11,6 +11,8 @@ def step_impl(context, filename):
 def step_impl(context, command):
     import subprocess
     s = subprocess.Popen(command.split())
+    retcode = s.wait()
+    stdout, stderr = s.communicate()
 
 
 @then('we expect to have file {filename} with content')
