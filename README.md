@@ -3,6 +3,10 @@
 
 Application that converts given csv files into JSON arrays of objects.
 
+In simplest form it reads a CSV header and creates a list of objects with string-typed values.
+
+There's also an option to provide a mapping of columns to proper types.
+
 
 ## Features 
 

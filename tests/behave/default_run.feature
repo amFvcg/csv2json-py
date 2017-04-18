@@ -1,6 +1,6 @@
 Feature: Default conversion to string values
     Scenario: Conversion without parameters
-        Given csv file test.csv with input
+        Given csv file test.csv
         """
         Field1,Field2,Field3
         1,value,

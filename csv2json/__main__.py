@@ -21,13 +21,16 @@ def main():
         with open(args.data) as f:
             header = f.readline().strip().split(args.delimiter)
         mapping = csv2json.mapping.default(header)
+    print("Mapping:", mapping)
 #    validated = validate_file(args.data, mapping, args.delimiter)
 #    if args.validate:
 #         validated
 
     with open(args.data) as fin,\
          open(args.data+'.json', 'w') as fout:
-        next(fin)
+        if not args.mapping:
+            # TODO: fix this, it's such a dirty hack
+            next(fin)
         parse_file(fin, fout, mapping, args.delimiter)
 
 if __name__ == '__main__':

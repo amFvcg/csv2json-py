@@ -1,8 +1,9 @@
+import tempfile
 from behave import given, when, then
 
 
-@given('csv file {filename} with input')
-def step_impl(context, filename):
+@given('{some_file} file {filename}')
+def step_impl(context, some_file, filename):
     with open(filename, 'w') as f:
         f.write(context.text)
 
