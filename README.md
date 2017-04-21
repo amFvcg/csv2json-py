@@ -1,4 +1,4 @@
-# csv2json [![Build Status](https://travis-ci.org/amFvcg/csv_parser.svg?branch=master)](https://travis-ci.org/amFvcg/csv_parser)
+# csv2json [![Build Status](https://travis-ci.org/amFvcg/csv2json-py.svg?branch=master)](https://travis-ci.org/amFvcg/csv_parser)
 
 
 Application that converts given csv files into JSON arrays of objects.
